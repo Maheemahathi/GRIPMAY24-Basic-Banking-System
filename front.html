@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks Banking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sparks Bank</h1>
+        <div class="sender-recipient">
+            <div class="sender">
+                <label for="sender">Sender:</label>
+                <select id="sender">
+                    <option value="0">Select</option>
+                </select>
+            </div>
+            <div class="recipient">
+                <label for="recipient">Recipient:</label>
+                <select id="recipient">
+                    <option value="0">Select</option>
+                </select>
+            </div>
+        </div>
+        <div class="transaction">
+            <input type="number" id="amount" placeholder="Enter amount">
+            <button onclick="transfer()">Send Money</button>
+        </div>
+        <div class="balance">
+            <h2>Sender Balance: $<span id="sender-balance">0.00</span></h2>
+            <h2>Recipient Balance: $<span id="recipient-balance">0.00</span></h2>
+        </div>
+        <div class="history">
+            <h2>Transaction History</h2>
+            <ul id="history-list">
+            </ul>
+        </div>
+        <div class="view-customers">
+            <button onclick="viewAllCustomers()">View All Customers</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
